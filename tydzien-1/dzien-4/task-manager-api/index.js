@@ -37,22 +37,21 @@ app.get("/", (req, res) => {
 });
 
 
-// ==========================
+
 // GET /tasks
 // zwraca wszystkie zadania
 // status 200
-// ==========================
+
 
 app.get("/tasks", (req, res) => {
   res.status(200).json(tasks);
 });
 
 
-// ==========================
 // GET /tasks/:id
 // zwraca jedno zadanie
 // status 200 lub 404
-// ==========================
+
 
 app.get("/tasks/:id", (req, res) => {
   // params zawsze są stringiem
@@ -72,11 +71,10 @@ app.get("/tasks/:id", (req, res) => {
 });
 
 
-// ==========================
 // POST /tasks
 // dodaje nowe zadanie
 // status 201
-// ==========================
+
 
 app.post("/tasks", (req, res) => {
   // dane z body
