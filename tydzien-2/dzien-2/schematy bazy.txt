@@ -1,0 +1,28 @@
+# Database Schema
+
+categories
+
+id (PK)
+name UNIQUE
+
+tasks
+
+id (PK)
+title
+description
+created_at
+updated_at
+category_id (FK -> categories.id)
+
+Relacja:
+categories (1) ---> (*) tasks
+
+Opis:
+Jedna kategoria może mieć wiele zadań.
+Każde zadanie należy do jednej kategorii.
+
+FOREIGN KEY:
+tasks.category_id references categories.id
+
+updated_at:
+Pole aktualizuje się automatycznie przy każdej modyfikacji rekordu dzięki triggerowi.

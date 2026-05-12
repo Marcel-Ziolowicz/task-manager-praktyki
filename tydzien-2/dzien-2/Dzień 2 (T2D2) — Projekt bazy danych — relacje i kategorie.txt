@@ -1,0 +1,37 @@
+Day 2 — Relacje i kategorie w bazie danyc
+Krótki opis
+
+Podczas tego dnia rozbudowałem bazę danych o tabelę `categories` oraz nauczyłem się tworzyć relacje między tabelami za pomocą `FOREIGN KEY`.
+
+Dodałem:
+
+* tabelę `categories`,
+* relację `tasks.category_id -> categories.id`,
+* zapytania z użyciem `JOIN` i `LEFT JOIN`,
+* agregację danych przez `GROUP BY` i `COUNT`,
+* kolumnę `updated_at`,
+* automatyczną aktualizację `updated_at` przy pomocy triggera.
+
+Dowiedziałem się również, czym jest integralność referencyjna i dlaczego baza blokuje dodanie rekordu z nieistniejącym `category_id`.
+
+Relacja w bazie:
+`categories (1) -> (*) tasks`
+
+Jedna kategoria może posiadać wiele zadań, ale każde zadanie należy tylko do jednej kategorii.
+
+Trigger `updated_at` automatycznie aktualizuje datę modyfikacji rekordu przy każdym `UPDATE`, dzięki czemu aplikacja nie musi robić tego ręcznie.
+
+Zadania wykonane
+
+* [x] Tabela `categories` utworzona z danymi
+* [x] Dodano `category_id` z `FOREIGN KEY`
+* [x] Przetestowano integralność referencyjną
+* [x] Wykonano zapytania `JOIN` i `LEFT JOIN`
+* [x] Wykonano `GROUP BY` i `COUNT`
+* [x] Dodano kolumnę `updated_at`
+* [x] Utworzono automatyczną aktualizację `updated_at`
+* [x] Utworzono trigger `BEFORE UPDATE`
+* [x] Przetestowano działanie triggera
+* [x] Utworzono schemat bazy danych
+* [x] Utworzono branch `feature/database-schema`
+* [x] Wykonano commit i push zmian
