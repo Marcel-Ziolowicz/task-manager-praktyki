@@ -4,6 +4,7 @@ const express = require("express");
 
 const tasksRouter = require("./routes/tasks");
 const categoriesRouter = require("./routes/categories");
+const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
